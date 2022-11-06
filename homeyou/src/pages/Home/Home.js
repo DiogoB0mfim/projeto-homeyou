@@ -13,10 +13,10 @@ const Home = () => {
             Encontre uma variedade de propriedades que combinam com você.
             Esqueça todas as dificuldades em encontrar uma residência
           </S.PInfos>
-          <div>
-            <button>Entre em contato</button>
-            <button>Mais sobre nós</button>
-          </div>
+          <S.DivButton>
+            <S.ButtonContact>Entre em contato</S.ButtonContact>
+            <S.ButtonAbout>Mais sobre nós</S.ButtonAbout>
+          </S.DivButton>
         </S.ContainerInfos>
         <S.ImgHero src={homeHeroSection} alt="imagem de uma casa" />
       </S.ContainerHero>
