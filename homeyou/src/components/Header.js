@@ -7,6 +7,15 @@ import search from "../assets/fi_search.png";
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState("disabled");
+  const [menuScroll, setMenuScroll] = useState("fixed");
+
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      setMenuScroll("scrolled");
+    } else {
+      setMenuScroll("fixed");
+    }
+  });
 
   const toggleState = () => {
     if (toggleMenu === "disabled") {
@@ -23,7 +32,7 @@ const Header = () => {
   };
 
   return (
-    <S.Header id="header">
+    <S.Header id="header" className={menuScroll}>
       <S.HeaderLogo>
         <S.ImgHeader
           src={logo}

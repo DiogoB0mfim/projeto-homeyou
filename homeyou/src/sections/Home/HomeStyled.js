@@ -124,6 +124,7 @@ export const ButtonContact = styled.button`
 export const ButtonAbout = styled.button`
   background-color: transparent;
   border: none;
+  font-weight: 600;
   border-bottom: 1px solid #000;
   cursor: pointer;
 `;

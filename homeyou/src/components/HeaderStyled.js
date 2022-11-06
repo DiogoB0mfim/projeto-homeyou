@@ -8,13 +8,21 @@ export const Header = styled.div`
   align-items: center;
   gap: 2.8rem;
   justify-content: space-around;
-  background: #ffff;
   position: sticky;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   top: 0;
   z-index: 10;
   @media (max-width: 768px) {
     justify-content: space-between;
+  }
+
+  &.fixed {
+    background-color: #e7e7e7;
+    transition: 0.3s;
+  }
+
+  &.scrolled {
+    background-color: #fff;
+    transition: 0.3s;
   }
 `;
 
