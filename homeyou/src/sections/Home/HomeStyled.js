@@ -6,7 +6,7 @@ export const ContainerHero = styled.div`
   align-items: center;
   justify-content: center;
   gap: 6%;
-  background-color: #e7e7e7;
+  background-color: #f9f9f9;
 
   @media (max-width: 1680px) {
     gap: 9%;
@@ -100,9 +100,10 @@ export const ButtonContact = styled.button`
   border: none;
   color: #ffff;
   padding: 12px 32px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transform: skew(0deg);
+  font-size: 1.1rem;
 
   &:before {
     content: "";
@@ -118,13 +119,22 @@ export const ButtonContact = styled.button`
   &:hover::before {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 // *Estilização do botão de mais sobre nós
 export const ButtonAbout = styled.button`
   background-color: transparent;
   border: none;
-  font-weight: 600;
+  font-weight: 500;
   border-bottom: 1px solid #000;
   cursor: pointer;
+  font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;

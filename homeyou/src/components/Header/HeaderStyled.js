@@ -11,18 +11,24 @@ export const Header = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  @media (max-width: 768px) {
-    justify-content: space-between;
-  }
 
   &.fixed {
-    background-color: #e7e7e7;
+    background-color: #f9f9f9;
     transition: 0.3s;
   }
-
   &.scrolled {
-    background-color: #fff;
+    background-color: #000;
     transition: 0.3s;
+    color: #ffff;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+
+    &.scrolled {
+      background-color: #e7e7e7;
+      color: #000;
+    }
   }
 `;
 
@@ -39,6 +45,12 @@ export const HeaderLogo = styled.div`
 // *Estilização da imagem de logo
 export const ImgHeader = styled.img`
   background-color: #000;
+
+  @media (min-width: 769px) {
+    &.scrolled {
+      filter: invert(100%);
+    }
+  }
 `;
 
 // *Estilização do menu UL
@@ -74,9 +86,19 @@ export const MenuA = styled.a`
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 500ms;
   transition-property: color;
+
+  &.scrolled {
+    color: #ffff;
+  }
+
   @media (max-width: 768px) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &.scrolled {
+      color: #000;
+    }
   }
+
   &:focus:after {
     width: 100%;
     left: 0%;
@@ -152,6 +174,14 @@ export const Nav = styled.nav`
       height: calc(100vh - 70px);
       visibility: visible;
       overflow-y: auto;
+    }
+  }
+`;
+
+export const ImgSocial = styled.img`
+  @media (min-width: 769px) {
+    &.scrolled {
+      filter: invert(100%);
     }
   }
 `;

@@ -1,9 +1,9 @@
 import * as S from "./HeaderStyled";
 import { useState } from "react";
-import logo from "../assets/logo.svg";
-import user from "../assets/fi_user.png";
-import fav from "../assets/fi_fav.png";
-import search from "../assets/fi_search.png";
+import logo from "../../assets/logo.svg";
+import user from "../../assets/fi_user.png";
+import fav from "../../assets/fi_fav.png";
+import search from "../../assets/fi_search.png";
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState("disabled");
@@ -38,6 +38,7 @@ const Header = () => {
           src={logo}
           alt="logo-empresa"
           onClick={() => scrollTop(0)}
+          className={menuScroll}
         />
         Homeyou
       </S.HeaderLogo>
@@ -54,33 +55,57 @@ const Header = () => {
         </S.BtnMobile>
         <S.MenuUl id="menu" role="menu">
           <li>
-            <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
+            <S.MenuA
+              href="#"
+              onClick={() => setToggleMenu("disabled")}
+              className={menuScroll}
+            >
               Início
             </S.MenuA>
           </li>
           <li>
-            <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
+            <S.MenuA
+              href="#"
+              onClick={() => setToggleMenu("disabled")}
+              className={menuScroll}
+            >
               Galeria
             </S.MenuA>
           </li>
           <li>
-            <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
+            <S.MenuA
+              href="#"
+              onClick={() => setToggleMenu("disabled")}
+              className={menuScroll}
+            >
               Contato
             </S.MenuA>
           </li>
           <li>
             <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
-              <img src={user} alt="icone de user" />
+              <S.ImgSocial
+                src={user}
+                alt="icone de user"
+                className={menuScroll}
+              />
             </S.MenuA>
           </li>
           <li>
             <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
-              <img src={fav} alt="icone de favorito" />
+              <S.ImgSocial
+                src={fav}
+                alt="icone de favorito"
+                className={menuScroll}
+              />
             </S.MenuA>
           </li>
           <li>
             <S.MenuA href="#" onClick={() => setToggleMenu("disabled")}>
-              <img src={search} alt="icone de pesquisa" />
+              <S.ImgSocial
+                src={search}
+                alt="icone de pesquisa"
+                className={menuScroll}
+              />
             </S.MenuA>
           </li>
         </S.MenuUl>
