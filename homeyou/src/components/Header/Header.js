@@ -65,7 +65,7 @@ const Header = () => {
           </li>
           <li>
             <S.MenuA
-              href="#"
+              href="#galery"
               onClick={() => setToggleMenu("disabled")}
               className={menuScroll}
             >
@@ -74,7 +74,7 @@ const Header = () => {
           </li>
           <li>
             <S.MenuA
-              href="#"
+              href="#contact"
               onClick={() => setToggleMenu("disabled")}
               className={menuScroll}
             >

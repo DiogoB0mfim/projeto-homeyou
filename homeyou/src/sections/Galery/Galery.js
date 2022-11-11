@@ -15,7 +15,7 @@ import * as S from "./GaleryStyled";
 const Galery = () => {
   return (
     <>
-      <S.ContainerInfo>
+      <S.ContainerInfo id="galery">
         <S.H2infos>Galeria</S.H2infos>
         <S.Pinfos>
           Se você está entediado com a aparência da decoração de interiores da
